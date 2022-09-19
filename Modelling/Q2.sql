@@ -11,7 +11,7 @@ INNER JOIN Cellular_Components C   ON (M.pdb_id = C.pdb_id)
 INNER JOIN Video V  ON (M.video_id = V.video_id)
 INNER JOIN Person P ON (M.person_id = P.person_id)
 
-WHERE C.cellular_component_name LIKE '%Insulin%'
+WHERE C.cellular_component_name LIKE '%Insulin%' AND
 WHERE P.person_name = 'Alex' OR P.person_name = 'Helen'
 
 GROUP BY
