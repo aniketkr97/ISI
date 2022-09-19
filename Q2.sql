@@ -1,9 +1,9 @@
 // Query about such a video which has a Person 1 (Alex) and Person 2(Helen) talking about cellular component X
 
 SELECT
-	V.video_id,
+    V.video_id,
     M.media_name,
-	C.cellular_component_name
+    C.cellular_component_name
     P.person_id
 
 FROM Media M

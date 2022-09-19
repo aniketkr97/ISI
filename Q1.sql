@@ -1,7 +1,7 @@
 // Query to Select Videos which have a media component in them. 
 SELECT
 	V.video_id,
-    M.media_name,
+	M.media_name,
 	C.pdb_id
 
 FROM Media M
