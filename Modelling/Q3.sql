@@ -1,17 +1,14 @@
 // Query to look for interviews about VR captures
-//WIP
 SELECT
     V.video_id,
-    M.media_name,
-    P.person_id
+    M.media_name
 
-FROM Media M , VR Capture VR
+FROM Media M ,Video V 
 
 INNER JOIN Video V  ON (M.video_id = V.video_id)
 
 WHERE V.video_type = 'Interview' AND 
-V.video_id = VR.video_id AND
-VR.vide_id = 'Helen'
+M.media_type CONTAINS ('VR')
 
 GROUP BY
-    P.person
+    M.media_name
