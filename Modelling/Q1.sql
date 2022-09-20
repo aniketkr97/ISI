@@ -1,4 +1,4 @@
-// Query to Select Videos which have a media component in them. 
+// Query to Select Videos which have Insulin as a cellular component in them.
 SELECT
 	V.video_id,
 	M.media_name,
