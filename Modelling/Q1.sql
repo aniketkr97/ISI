@@ -1,15 +1,13 @@
 // Query to Select Videos which have Insulin as a cellular component in them.
 SELECT
-	V.video_id,
+	M.video_id,
 	M.media_name,
-	C.pdb_id
-
+	MC.pdb_id
 FROM Media M
-INNER JOIN Cellular_Components C   ON (M.pdb_id = C.pdb_id)
-INNER JOIN Video V  ON (M.video_id = V.video_id)
+INNER JOIN Media_Component MC ON (M.media_id = MC.media_id)
+INNER JOIN Cellular_Component C ON (C.pdb_id = MC.pdb_id)
 
 WHERE C.cellular_component_name LIKE '%Insulin%'
 
 GROUP BY
 	V.video_id,
-	
